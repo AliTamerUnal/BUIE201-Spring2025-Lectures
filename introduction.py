@@ -1,16 +1,9 @@
-x = (12, "tamer")
-y = {13, 67, 13, 99}
+listofsquares = []
+for i in range(1, 11):
+    listofsquares.append(i**2)
 
-z = {"q":6, "w":45, "e": "tamer", "p": 6}
+los = [i**2 for i in range(1, 11)]
 
-x1, x2 = x
-
-
-b = False
-for i in z:
-    if i == 25:
-        b = True
-        break
 
 
 def f():
