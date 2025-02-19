@@ -1,14 +1,17 @@
-studentIDS = [10, 25, 99, 7, "tamer"] 
-studentIDS[4] = 34.76
+x = (12, "tamer")
+y = {13, 67, 13, 99}
 
-x = studentIDS[1:3]
+z = {"q":6, "w":45, "e": "tamer", "p": 6}
 
-studentIDS[1] = 12
-y = studentIDS
+x1, x2 = x
 
-y[2] = 33
 
-y = studentIDS[:]
+b = False
+for i in z:
+    if i == 25:
+        b = True
+        break
+
 
 def f():
     return 10
