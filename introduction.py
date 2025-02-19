@@ -1,10 +1,10 @@
-listofsquares = []
-for i in range(1, 11):
-    listofsquares.append(i**2)
 
-los = [i**2 for i in range(1, 11)]
+m = 33
 
+def f(n):
+    m = 66
+    i = 10 + n + m
+    return i
 
-
-def f():
-    return 10
+x = f(5)
+print(m)
