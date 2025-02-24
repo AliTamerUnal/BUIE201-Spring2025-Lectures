@@ -1,7 +1,7 @@
 
 def factorial(n):
-    f = 1
-    for i in range(n):
-        f *= i + 1
-
-    return f
+    if n < 0:
+        return None
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
