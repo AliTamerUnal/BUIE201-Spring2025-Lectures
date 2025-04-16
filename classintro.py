@@ -1,26 +1,42 @@
-i = 5
-def f():
-    j = 10
-    print (j)
-
-f()
-class Apple:  # class, concept
-    type = "fruit"
-    def __init__(self, loc = "tree", clr = "red"):
+class Fruit:
+    def __init__(self, loc, clr):
         self._location = loc
         self._color = clr
 
     def _setlocation(self, l):
         self._location = l
 
+    def fruitName(self):
+        pass
+
     def drop(self):
         if self._location == "tree":
             self._setlocation("ground")
-            print ("I dropped")
+            print ("I am a" + self.fruitName() + " and I dropped")
         else:
-            print ("I connot be dropped")
+            print ("I am a" + self.fruitName() + " and I connot be dropped")
 
-x = Apple("tree", "red") # object, tangible, implicitely calls __init__
+class Apple(Fruit):  # class, concept
+    def __init__(self, clr = "red"):
+        super().__init__("tree", clr)
+
+    def fruitName(self):
+        return "Apple"
+
+class Strawberry(Fruit):
+    def __init__(self):
+        super().__init__("ground", "red")
+
+    def fruitName(self):
+        return "Strawberry"
+
+
+x = Apple("red") # object, tangible, implicitely calls __init__
+x.drop()
+
+y = Strawberry()
+y.drop()
+
 y = Apple()
 z = Apple(clr="yellow")
 
